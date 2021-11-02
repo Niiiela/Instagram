@@ -1,0 +1,188 @@
+*
+{
+    padding: 0;
+    margin: 20px;
+    box-sizing: border-box;  /*Alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos.  */
+    text-decoration: none; /*é usada para definir a formatação de underline, overline, line-through ou blink. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o. A propriedade text-decoration desenha em elementos descendentes.*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh; /* é usado para definir a altura mínima de um determinado elemento. */
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex; /*Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */
+    justify-content: center;
+}
+
+.interface
+{
+   
+    display: flex;
+    align-items:center;
+    justify-content: start;/* é uma propriedade que define o alinhamento dos Flex Itens ao longo do eixo principal do contêiner. flex-start: Esse é o valor padrão*/
+    width: 60%; 
+    height: 100vh;
+}
+
+.instagram-logo 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+
+}
+
+.instagram-logo img
+{
+    height: 100rem;
+}
+
+.continue
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /*irá ajustar seu menu conforme a tela de visualização.*/
+    flex-direction: column; /*Os itens ficam em uma única coluna, um embaixo do outro. */
+    width: 50%;
+    min-width: 30rem; /*determina a largura da área de conteúdo de um elemento. */
+}
+
+
+.group
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Cria um espaçamento igual entre os elementos. */
+    flex-direction: column;
+    background-color: rgb(218, 207, 228);
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 8px inset rgb(184, 20, 199);
+}
+
+.group:nth-child(1) /*seja o primeiro de seu grupo de irmãos.*/
+{
+    min-height: 15rem;
+}
+
+.instagram-logo
+{
+    height: 20rem;
+}
+
+.perfil
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden; /*Barras de rolagem exigem que o elemento tenha uma altura fixa ou máxima estabelecida para fazer com que os elementos internos o percorram com a ação da barra de rolagem. */
+}
+
+.perfil img
+{
+    height: 20rem;
+}
+
+.instagram-logar
+{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    margin: 5%;
+    border-radius: 47px;
+    font-size: 50px;
+}
+
+.remover-login
+{
+    color:blue;
+    margin-top: 2rem;
+    font-size: 50px;
+}
+
+.texto01
+{
+    color: rgb(145, 119, 194);
+    font-size: 50px;
+}
+
+.linkb
+{
+    color:blue;
+    font-size: 50px;
+}
+
+.baixar
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3rem 0;
+}
+ .texto
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    color: rgb(240, 232, 232);
+    font-size: 50px;
+}
+.aplicativos
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+.play{
+    height: 8rem;
+    width: 10vh;
+    background-size:cover;
+    background-color: rgb(218, 207, 228);
+    margin: 0%;
+    padding: 0;
+}
+.play:nth-child(1) {
+    background-image: url('img/app.png');
+}
+.play:nth-child(2) {
+    background-image: url('img/icone.png');
+}
+@media (max-width: 1024px) {
+    .interface {
+        width: 90%;
+    }
+}
+@media (max-width: 650px) {
+    body {
+        background-color: #020202;
+    }
+
+    .interface {
+        width: 100%;
+    }
+
+    .instagram-logo {
+        display: none;
+    }
+
+    .continue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
+    }
+}
